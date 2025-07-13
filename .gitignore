@@ -27,3 +27,6 @@ Thumbs.db
 # IDE settings
 .vscode/
 .idea/
+
+package.json
+package-lock.json
