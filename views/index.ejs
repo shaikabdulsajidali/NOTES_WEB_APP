@@ -12,18 +12,19 @@
         <div class="main w-full min-h-screen text-white bg-zinc-900">
             <h1 class="text-center p-5 text-2xl  ">Notes </h1>
             <div class="form p-20 bg-zinc-800 mt-5 ">
-                <form action="" >
-                    <input class="block w-full rounded-md px-5 py-3 bg-zinc-600" type="text" placeholder="Enter title">
-                    <textarea class="block w-full rounded-md px-5 py-3 mt-2 resize-none bg-zinc-600" name="" id="" placeholder="Enter your data"></textarea>
+                <form action="/create" method="post" >
+                    <input class="block w-full rounded-md px-5 py-3 bg-zinc-600" type="text" placeholder="Enter title" name="title">
+                    <textarea class="block w-full rounded-md px-5 py-3 mt-2 resize-none bg-zinc-600" name="details" placeholder="Enter your data"></textarea>
                     <input class="px-5 py-3  rounded-md bg-blue-500 mt-2" type="submit" value="Create Task">
                 </form>
             </div>
             <div class="tasks p-10 flex gap-2 flex-wrap  "> 
-                <% if(filesarray.length > 0){ %>     //filesarray is array passed from index.js files
+                <% if(filesarray.length > 0){ %>    <!--filesarray is array passed from index.js files-->
                     <% filesarray.forEach((val)=>{ %>
-                        <div class="task1 w-90 rounded-md p-5 bg-zinc-600">
-                            <h1 class=" text-3xl tracking-tighter ">Some task goes here</h1>
-                            <a href="" class="text-blue-800 inline-block mt-3 ">read more</a>
+                        <div class="task1 min-w-90 rounded-md p-5 bg-zinc-600">
+                            <h1 class=" text-3xl tracking-tighter "><%= val %></h1>
+                            <h4 class=" text-xl tracking-tighter "> <%= val.da %> </h4>
+                            <a href="./files" class="text-blue-800 inline-block mt-3 ">read more</a>
                         </div>
                     <% }) %>
                 <% }else{ %>
