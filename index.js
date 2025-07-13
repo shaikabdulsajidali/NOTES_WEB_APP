@@ -2,6 +2,7 @@ const express=require('express')
 const app=express()
 
 const path=require('path')
+const fs=require('fs')
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -11,8 +12,10 @@ app.set('view engine','ejs')
 
 app.get("/",(req,res)=>{
     console.log("hi");
-    // res.send("hi")
-    res.render("index")
+    fs.readdir(`./files`,(err,fileslist)=>{
+        res.render("index",{ filesarray:fileslist})
+    })
+    
 })
 
 app.listen(3000,()=>{
