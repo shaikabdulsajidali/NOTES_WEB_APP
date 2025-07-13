@@ -1,0 +1,7 @@
+-> Embedded Java Scripts.
+-> It is a way of using html in javascript.
+-> Needs ejs package install from npm.
+-> requires setup in index.js .
+         -> app.set('view engine','ejs')
+
+
