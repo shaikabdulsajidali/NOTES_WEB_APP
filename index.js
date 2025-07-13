@@ -12,8 +12,8 @@ app.set('view engine','ejs')
 
 app.get("/",(req,res)=>{
     console.log("hi");
-    fs.readdir(`./files`,(err,fileslist)=>{
-        res.render("index",{ filesarray:fileslist})
+    fs.readdir(`./files`,(err,filelist)=>{               //reading files from 'files' folder, 'err' will contain an error if reading the folder fails,filelist is list of files in 'files' folder
+        res.render("index",{ filesarray:filelist})
     })
     
 })

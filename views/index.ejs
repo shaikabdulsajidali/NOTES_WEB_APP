@@ -18,12 +18,12 @@
                     <input class="px-5 py-3  rounded-md bg-blue-500 mt-2" type="submit" value="Create Task">
                 </form>
             </div>
-            <div class="tasks p-10 flex gap-2 flex-wrap  ">
-                <% if(filesarray.length > 0){ %>
+            <div class="tasks p-10 flex gap-2 flex-wrap  "> 
+                <% if(filesarray.length > 0){ %>     //filesarray is array passed from index.js files
                     <% filesarray.forEach((val)=>{ %>
                         <div class="task1 w-90 rounded-md p-5 bg-zinc-600">
                             <h1 class=" text-3xl tracking-tighter ">Some task goes here</h1>
-                            <a href="" class="text-blue-500 inline-block mt-3 ">read more</a>
+                            <a href="" class="text-blue-800 inline-block mt-3 ">read more</a>
                         </div>
                     <% }) %>
                 <% }else{ %>
