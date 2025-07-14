@@ -22,7 +22,11 @@
                     <% filesarray.forEach((val)=>{ %>
                         <div class="task1 min-w-90 rounded-md p-5 bg-zinc-600">
                             <h1 class=" text-3xl tracking-tighter "><%= val %></h1>
-                            <a href="/files/<%= val%>" class="text-blue-800 inline-block mt-3 ">read more</a>
+                            <div class="flex justify-between">
+                                <a href="/files/<%= val%>" class="text-blue-600 inline-block mt-3 bg-zinc-400 rounded p-1">read more</a>
+                                <a href="/edit/<%= val%>" class="text-zinc-900 inline-block mt-3 bg-zinc-400 rounded p-1" >Edit name</a>
+                            </div>
+                           
                         </div>
                     <% }) %>
                 <% }else{ %>
