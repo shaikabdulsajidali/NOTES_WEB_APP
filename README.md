@@ -24,38 +24,38 @@
 
     
 # Steps
-=>   npm init
-=>   create index.js file
-=>   install packages fron npm
-    npm i express nodemon 
-=>   in package.json
-    ->scripts
+-  npm init
+-  create index.js file
+-  install packages fron npm  
+    - npm i express nodemon 
+-  in package.json
+    - scripts
         "start" :"nodemon index.js"
-=>   in index.js
-    ->require express ,fs, path
-    ->search for static files in particular path directory
-        syntax: 
+-    in index.js
+    - require express ,fs, path
+    - search for static files in particular path directory
+        **syntax:**
             app.use(express.static(path.join(__dirname,'public')))
-    ->routing
-    ->listening
-=>   install ejs package from npm
+    - routing
+    - listening
+-  install ejs package from npm
     npm i ejs
-=>   create 'views' folder
-    ->create 'index.ejs' file inside views
-=>   create 'public' folder
-    -> create 'images' folder consisting of images. 
-    -> create 'javascripts' folder consisting of all script files.
-        ->create 'scripts.js' file
-    -> create 'stylesheets' folder consisting of all style files.
-        ->create 'style.css' file
-=>   in index.ejs file write basic html template
-    -> create form  
+-  create 'views' folder
+    - create 'index.ejs' file inside views
+-  create 'public' folder
+    - create 'images' folder consisting of images. 
+    - create 'javascripts' folder consisting of all script files.
+        - create 'scripts.js' file
+    - create 'stylesheets' folder consisting of all style files.
+        - create 'style.css' file
+-  in index.ejs file write basic html template
+    - create form  
         1. INPUT
         2. TEXTAREA
         3. SUBMIT   
-    -> list of files notes created ('files' folder) and using forEach each file is displayed
+    - list of files notes created ('files' folder) and using forEach each file is displayed
 
-=>  index.ejs is rendered on home page in index.js
+-  index.ejs is rendered on home page in index.js
 
         app.get("/",(req,res)=> {
             fs.readdir(`./files`,(err,filelist)=>{               //reading files from 'files' folder, 'err' will contain an error if reading the folder fails,filelist is list of files in 'files' folder
@@ -63,7 +63,7 @@
             })
             
         })
-=>  display of the tasks from the 'files' folder
+-  display of the tasks from the 'files' folder
     <div class="tasks p-8 flex gap-2 flex-wrap  "> 
         <% if(filesarray.length > 0){ %>    <!--filesarray is array passed from index.js files-->
             <% filesarray.forEach((val)=>{ %>
