@@ -64,18 +64,18 @@
             
         })
 -  display of the tasks from the 'files' folder
-    - <div class="tasks p-8 flex gap-2 flex-wrap"> 
-        <% if(filesarray.length > 0){ %>    <!--filesarray is array passed from index.js files-->
-            <% filesarray.forEach((val)=>{ %>
-                <div class="task1 min-w-90 rounded-md p-5 bg-zinc-600">
-                    <h1 class=" text-3xl tracking-tighter "><%= val %></h1>
-                    <a href="/files/<%= val%>" class="text-blue-800 inline-block mt-3 ">read more</a>
-                </div>
-            <% }) %>
-        <% }else{ %>
-                <h1 class=" text-3xl tracking-tighter ">No task present here</h1>
-        <% } %>
-      </div>
+        <div class="tasks p-8 flex gap-2 flex-wrap"> 
+            <% if(filesarray.length > 0){ %>    <!--filesarray is array passed from index.js files-->
+                <% filesarray.forEach((val)=>{ %>
+                    <div class="task1 min-w-90 rounded-md p-5 bg-zinc-600">
+                        <h1 class=" text-3xl tracking-tighter "><%= val %></h1>
+                        <a href="/files/<%= val%>" class="text-blue-800 inline-block mt-3 ">read more</a>
+                    </div>
+                <% }) %>
+            <% }else{ %>
+                    <h1 class=" text-3xl tracking-tighter ">No task present here</h1>
+            <% } %>
+        </div>
             
 
     
